@@ -2,7 +2,7 @@
   "trunk": {
     "name": "Tampa food phone",
     "numbers": ["+14486782672"],
-    "allowedNumbers": ["+18135550123"],
+    "allowedNumbers": ["+18137843501", "+14152975110"],
     "krispEnabled": true
   }
 }
