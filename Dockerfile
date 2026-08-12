@@ -8,9 +8,10 @@ ENV UV_COMPILE_BYTECODE=1
 FROM base AS build
 WORKDIR /app
 COPY pyproject.toml uv.lock ./
-RUN uv sync --locked --no-dev
+RUN uv sync --locked --no-dev --no-install-project
 COPY src ./src
 COPY data ./data
+RUN uv sync --locked --no-dev
 
 FROM base AS runtime
 ARG UID=10001
