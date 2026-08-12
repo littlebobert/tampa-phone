@@ -1,0 +1,8 @@
+{
+  "trunk": {
+    "name": "Tampa food phone",
+    "numbers": ["+14486782672"],
+    "allowedNumbers": ["+18135550123"],
+    "krispEnabled": true
+  }
+}

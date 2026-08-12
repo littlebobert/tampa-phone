@@ -1,0 +1,42 @@
+{
+  "restaurants": [
+    {
+      "id": "demo-bay-pizza",
+      "name": "Demo Bay Pizza",
+      "cuisine": "Pizza and Italian",
+      "neighborhood": "South Tampa",
+      "address": "Replace with a real restaurant",
+      "phone": "",
+      "hours_note": "Demo data only; hours are not verified",
+      "source_url": "",
+      "refreshed_at": "2026-08-12T00:00:00Z",
+      "items": [
+        {"id": "garlic-knots", "name": "Garlic Knots", "description": "Six baked knots with garlic butter and marinara", "price_cents": 699, "category": "Starters"},
+        {"id": "house-salad", "name": "House Salad", "description": "Mixed greens, tomatoes, onion, cucumber, and Italian dressing", "price_cents": 899, "category": "Starters"},
+        {"id": "cheese-pizza", "name": "Cheese Pizza", "description": "Hand-tossed pizza with tomato sauce and mozzarella", "price_cents": 1599, "category": "Pizza"},
+        {"id": "pepperoni-pizza", "name": "Pepperoni Pizza", "description": "Mozzarella, tomato sauce, and pepperoni", "price_cents": 1899, "category": "Pizza"},
+        {"id": "veggie-pizza", "name": "Garden Pizza", "description": "Mushrooms, peppers, onions, olives, and mozzarella", "price_cents": 1999, "category": "Pizza"},
+        {"id": "baked-ziti", "name": "Baked Ziti", "description": "Ziti baked with ricotta, tomato sauce, and mozzarella", "price_cents": 1699, "category": "Pasta"}
+      ]
+    },
+    {
+      "id": "demo-palm-thai",
+      "name": "Demo Palm Thai Kitchen",
+      "cuisine": "Thai",
+      "neighborhood": "West Tampa",
+      "address": "Replace with a real restaurant",
+      "phone": "",
+      "hours_note": "Demo data only; hours are not verified",
+      "source_url": "",
+      "refreshed_at": "2026-08-12T00:00:00Z",
+      "items": [
+        {"id": "spring-rolls", "name": "Vegetable Spring Rolls", "description": "Crispy rolls with sweet chili sauce", "price_cents": 795, "category": "Appetizers"},
+        {"id": "satay", "name": "Chicken Satay", "description": "Grilled chicken skewers with peanut sauce", "price_cents": 1095, "category": "Appetizers"},
+        {"id": "pad-thai", "name": "Pad Thai", "description": "Rice noodles with egg, bean sprouts, scallions, peanuts, and choice of protein", "price_cents": 1695, "category": "Noodles"},
+        {"id": "drunken-noodles", "name": "Drunken Noodles", "description": "Wide rice noodles with basil, vegetables, chili, and choice of protein", "price_cents": 1795, "category": "Noodles"},
+        {"id": "green-curry", "name": "Green Curry", "description": "Coconut green curry with bamboo shoots, basil, vegetables, and choice of protein", "price_cents": 1795, "category": "Curries"},
+        {"id": "mango-sticky-rice", "name": "Mango Sticky Rice", "description": "Sweet coconut sticky rice with ripe mango", "price_cents": 895, "category": "Desserts"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "dispatch_rule": {
+    "rule": {
+      "dispatchRuleIndividual": {
+        "roomPrefix": "food-call-"
+      }
+    },
+    "name": "Tampa food phone calls",
+    "roomConfig": {
+      "agents": [
+        {
+          "agentName": "tampa-food-phone",
+          "metadata": "{\"channel\":\"phone\"}"
+        }
+      ]
+    }
+  }
+}
