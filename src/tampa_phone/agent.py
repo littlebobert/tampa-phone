@@ -1,11 +1,21 @@
 from __future__ import annotations
 
+import json
 import logging
 import os
+import re
+from datetime import date
 from pathlib import Path
 
 from dotenv import load_dotenv
-from livekit.agents import Agent, AgentServer, AgentSession, TurnHandlingOptions, function_tool
+from livekit.agents import (
+    Agent,
+    AgentServer,
+    AgentSession,
+    ChatContext,
+    TurnHandlingOptions,
+    function_tool,
+)
 from livekit.plugins import openai
 from openai.types.beta.realtime.session import TurnDetection
 
@@ -14,6 +24,7 @@ from tampa_phone.cart import Cart
 from tampa_phone.config import Settings
 from tampa_phone.handoff import OrderHandoff
 from tampa_phone.menu import MenuStore
+from tampa_phone.noaa import DEFAULT_LATITUDE, DEFAULT_LONGITUDE, NOAAClient, NOAAError
 
 load_dotenv(".env.local")
 load_dotenv()
@@ -23,14 +34,21 @@ AGENT_NAME = os.getenv("AGENT_NAME", "tampa-food-phone")
 
 
 class FoodPhoneAgent(Agent):
-    def __init__(self, menus: MenuStore, settings: Settings) -> None:
+    def __init__(
+        self,
+        menus: MenuStore,
+        settings: Settings,
+        caller_name: str = "Dennis",
+        chat_ctx: ChatContext | None = None,
+    ) -> None:
         self.menus = menus
         self.settings = settings
+        self.caller_name = caller_name
         self.cart = Cart(menus)
         self.handoff = OrderHandoff(settings)
         super().__init__(
             instructions=f"""
-You are a warm, patient phone concierge helping {settings.caller_name} browse restaurant
+You are a warm, patient phone concierge helping {caller_name} browse restaurant
 menus and prepare a food order for family review. This is a phone call, not a screen.
 
 Conversation rules:
@@ -55,7 +73,13 @@ Cart and safety rules:
 - Only after that yes may you call send_cart_for_review.
 - The handoff sends a text to a trusted family member. It never purchases food.
 - Never ask for or accept a card number, password, PIN, or Uber/DoorDash credentials.
-"""
+""",
+            chat_ctx=chat_ctx,
+        )
+
+    async def on_enter(self) -> None:
+        await self.session.generate_reply(
+            instructions=f"Welcome {self.caller_name} to food mode and ask what sounds good."
         )
 
     @function_tool
@@ -171,7 +195,7 @@ Cart and safety rules:
         if not self.settings.sms_is_configured:
             return "SMS review is not configured. No order was placed and no message was sent."
         body = (
-            f"Food order review requested by {self.settings.caller_name}:\n\n"
+            f"Food order review requested by {self.caller_name}:\n\n"
             f"{self.cart.summary()}\n\n"
             f"Fulfillment: {self.settings.fulfillment_summary}\n\n"
             "Please verify current availability, prices, fees, delivery address, and final total "
@@ -206,6 +230,161 @@ Cart and safety rules:
         )
 
 
+class BoatingPhoneAgent(Agent):
+    def __init__(
+        self,
+        noaa: NOAAClient,
+        caller_name: str = "Larry",
+        chat_ctx: ChatContext | None = None,
+    ) -> None:
+        self.noaa = noaa
+        self.caller_name = caller_name
+        super().__init__(
+            instructions=f"""
+You are a concise boating conditions assistant for {caller_name}.
+Today is {date.today().isoformat()}.
+For this demo, default to Tampa Bay near latitude {DEFAULT_LATITUDE}, longitude
+{DEFAULT_LONGITUDE} unless the caller specifies another location.
+
+Tool rules:
+- Choose tools based on the question. Use find_tide_stations before a tide or station-observation
+  request unless a station ID is already established.
+- Use get_tide_predictions for high/low tide times and heights.
+- Use get_latest_station_conditions for observed water level, wind, and temperatures.
+- Use get_marine_forecast for forecast wind, gusts, waves, period, rain, and thunder.
+- Use get_active_weather_alerts for advisories, watches, and warnings.
+- A boating briefing should check alerts, forecast, tides, and latest station conditions.
+- Never invent a station, measurement, forecast, warning, or timestamp.
+- Clearly distinguish observations from predictions and forecasts. State station name or ID,
+  source, units, and observation/update time.
+- Keep spoken answers short. Offer detail rather than reading large data arrays.
+- Never make a go/no-go decision or claim conditions are safe. Remind the caller to verify NOAA,
+  Coast Guard, local notices, and conditions before departure. This is not navigation advice.
+""",
+            chat_ctx=chat_ctx,
+        )
+
+    async def on_enter(self) -> None:
+        await self.session.generate_reply(
+            instructions=(
+                f"Welcome {self.caller_name} to boating mode. Say you can check NOAA tides, "
+                "conditions, marine forecasts, and alerts, then ask what area or question "
+                "they have."
+            )
+        )
+
+    @function_tool
+    async def find_tide_stations(
+        self,
+        location_query: str = "Tampa Bay",
+        latitude: float = DEFAULT_LATITUDE,
+        longitude: float = DEFAULT_LONGITUDE,
+    ) -> str:
+        """Find nearby NOAA tide and water-level stations for a place or coordinates."""
+        try:
+            result = await self.noaa.find_tide_stations(
+                location_query=location_query,
+                latitude=latitude,
+                longitude=longitude,
+            )
+        except (NOAAError, ValueError) as error:
+            return f"NOAA station lookup failed: {error}"
+        return json.dumps({"source": "NOAA CO-OPS Metadata API", "stations": result})
+
+    @function_tool
+    async def get_tide_predictions(self, station_id: str, begin_date: str, end_date: str) -> str:
+        """Get NOAA high/low tide predictions for a station and YYYY-MM-DD date range."""
+        try:
+            result = await self.noaa.tide_predictions(station_id, begin_date, end_date)
+        except (NOAAError, ValueError) as error:
+            return f"NOAA tide prediction request failed: {error}"
+        return json.dumps({"source": "NOAA CO-OPS Data API", **result})
+
+    @function_tool
+    async def get_latest_station_conditions(self, station_id: str) -> str:
+        """Get latest observed water level, wind, and temperatures at a NOAA station."""
+        try:
+            result = await self.noaa.latest_station_conditions(station_id)
+        except (NOAAError, ValueError) as error:
+            return f"NOAA station observation request failed: {error}"
+        return json.dumps({"source": "NOAA CO-OPS Data API", **result})
+
+    @function_tool
+    async def get_marine_forecast(
+        self,
+        latitude: float = 27.65,
+        longitude: float = -82.75,
+    ) -> str:
+        """Get NWS digital marine forecast data for coordinates, including wind and waves."""
+        try:
+            result = await self.noaa.marine_forecast(latitude, longitude)
+        except (NOAAError, ValueError) as error:
+            return f"NWS marine forecast request failed: {error}"
+        return json.dumps(result)
+
+    @function_tool
+    async def get_active_weather_alerts(
+        self,
+        latitude: float = DEFAULT_LATITUDE,
+        longitude: float = DEFAULT_LONGITUDE,
+    ) -> str:
+        """Get active National Weather Service alerts for coordinates."""
+        try:
+            result = await self.noaa.active_alerts(latitude, longitude)
+        except (NOAAError, ValueError) as error:
+            return f"NWS alert request failed: {error}"
+        return json.dumps(result)
+
+
+class ModeRouterAgent(Agent):
+    def __init__(
+        self,
+        menus: MenuStore,
+        settings: Settings,
+        noaa: NOAAClient,
+    ) -> None:
+        self.menus = menus
+        self.settings = settings
+        self.noaa = noaa
+        super().__init__(
+            instructions="""
+You are a demo call router. Your only job is to ask who is calling and select a mode.
+- Dennis selects food mode.
+- Larry selects boating mode.
+Call select_caller immediately after hearing the name. Do not answer food or boating questions
+before selecting a mode. For any other name, explain that this demo only recognizes Dennis or
+Larry and ask them to choose one of those names.
+"""
+        )
+
+    async def on_enter(self) -> None:
+        await self.session.generate_reply(
+            instructions="Greet the caller briefly and ask, who am I speaking with?"
+        )
+
+    @function_tool
+    async def select_caller(self, name: str):
+        """Select food or boating mode from the caller name Dennis or Larry."""
+        words = set(re.sub(r"[^a-z]+", " ", name.casefold()).split())
+        chat_ctx = self.chat_ctx.copy(exclude_instructions=True)
+        if "dennis" in words:
+            return (
+                FoodPhoneAgent(
+                    self.menus,
+                    self.settings,
+                    caller_name="Dennis",
+                    chat_ctx=chat_ctx,
+                ),
+                "Dennis selected food mode.",
+            )
+        if "larry" in words:
+            return (
+                BoatingPhoneAgent(self.noaa, caller_name="Larry", chat_ctx=chat_ctx),
+                "Larry selected boating mode.",
+            )
+        return "This demo only recognizes Dennis or Larry. Ask the caller to choose one."
+
+
 class RestrictedCallerAgent(Agent):
     def __init__(self) -> None:
         super().__init__(
@@ -233,6 +412,7 @@ async def food_phone(ctx: agents.JobContext) -> None:
     if not menu_path.is_absolute():
         menu_path = Path.cwd() / menu_path
     menus = MenuStore.from_json(menu_path)
+    noaa = NOAAClient()
 
     await ctx.connect(auto_subscribe=agents.AutoSubscribe.AUDIO_ONLY)
     participant = await ctx.wait_for_participant()
@@ -269,12 +449,9 @@ async def food_phone(ctx: agents.JobContext) -> None:
         )
         return
 
-    await session.start(room=ctx.room, agent=FoodPhoneAgent(menus, settings))
-    await session.generate_reply(
-        instructions=(
-            f"Greet {settings.caller_name} warmly. Explain in one sentence that you can help "
-            "browse menus and prepare a cart for family review, then ask what sounds good."
-        )
+    await session.start(
+        room=ctx.room,
+        agent=ModeRouterAgent(menus=menus, settings=settings, noaa=noaa),
     )
 
 

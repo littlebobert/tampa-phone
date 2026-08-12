@@ -1,10 +1,13 @@
 # Tampa Food Phone
 
-A private phone agent for browsing restaurant menus and preparing a cart for family review.
-Twilio handles phone/SMS, LiveKit handles voice, and menus are read from `data/menus.json`.
+A private multi-mode phone agent. The demo asks the caller's name, then routes:
 
-**It does not place orders or handle payment credentials.** Delivery to `33609` is preferred;
-pickup is the fallback. A family member verifies availability, fees, address, and final total.
+- `Dennis` → restaurant browsing and a cart for family review.
+- `Larry` → NOAA tides, observations, marine forecasts, and weather alerts.
+
+Twilio handles phone/SMS and LiveKit runs an OpenAI realtime voice agent. Food mode does not
+place orders or handle payment credentials. Boating mode is informational only and is not a
+substitute for official NOAA, Coast Guard, local notices, or current conditions.
 
 ## Setup
 
