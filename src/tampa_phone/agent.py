@@ -5,7 +5,9 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-from livekit.agents import Agent, AgentServer, AgentSession, function_tool, inference
+from livekit.agents import Agent, AgentServer, AgentSession, TurnHandlingOptions, function_tool
+from livekit.plugins import openai
+from openai.types.beta.realtime.session import TurnDetection
 
 from livekit import agents, rtc
 from tampa_phone.cart import Cart
@@ -57,7 +59,7 @@ Cart and safety rules:
         )
 
     @function_tool
-    def find_restaurants(self, query: str = "") -> str:
+    async def find_restaurants(self, query: str = "") -> str:
         """Find cached restaurants by name, cuisine, or neighborhood."""
         matches = self.menus.search_restaurants(query)
         if not matches:
@@ -70,7 +72,7 @@ Cart and safety rules:
         return "\n".join(lines)
 
     @function_tool
-    def get_restaurant_details(self, restaurant_id: str) -> str:
+    async def get_restaurant_details(self, restaurant_id: str) -> str:
         """Get details and menu categories for one cached restaurant."""
         try:
             restaurant = self.menus.restaurant(restaurant_id)
@@ -87,7 +89,7 @@ Cart and safety rules:
         )
 
     @function_tool
-    def browse_menu(
+    async def browse_menu(
         self,
         restaurant_id: str,
         category: str = "",
@@ -118,7 +120,7 @@ Cart and safety rules:
         return "\n".join([*lines, continuation])
 
     @function_tool
-    def add_to_cart(
+    async def add_to_cart(
         self,
         restaurant_id: str,
         item_id: str,
@@ -140,7 +142,7 @@ Cart and safety rules:
         )
 
     @function_tool
-    def remove_from_cart(self, line_number: int) -> str:
+    async def remove_from_cart(self, line_number: int) -> str:
         """Remove one numbered line from the cart."""
         try:
             line = self.cart.remove(line_number)
@@ -149,13 +151,13 @@ Cart and safety rules:
         return f"Removed {line.quantity} {line.item.name}."
 
     @function_tool
-    def clear_cart(self) -> str:
+    async def clear_cart(self) -> str:
         """Remove every item from the cart."""
         self.cart.clear()
         return "The cart is empty."
 
     @function_tool
-    def get_cart(self) -> str:
+    async def get_cart(self) -> str:
         """Get the complete cart for verbal readback before family review."""
         return f"{self.cart.summary()} {self.settings.fulfillment_summary}"
 
@@ -176,13 +178,31 @@ Cart and safety rules:
             "before placing anything. This text did not place an order."
         )
         try:
-            message_sid = await self.handoff.send(body)
+            result = await self.handoff.send(body)
         except Exception:
             logger.exception("Could not send order review SMS")
             return "The review text failed to send. No order was placed. Please try again later."
+        if result.status in {"undelivered", "failed"}:
+            logger.error(
+                "Order review SMS delivery failed",
+                extra={
+                    "message_sid": result.sid,
+                    "message_status": result.status,
+                    "message_error_code": result.error_code,
+                },
+            )
+            return (
+                f"The review text was not delivered. Twilio error {result.error_code}. "
+                "No order was placed. Please contact the family reviewer another way."
+            )
+        if result.status == "delivered":
+            return (
+                f"The review text was delivered successfully with reference {result.sid}. "
+                "No order has been placed."
+            )
         return (
-            f"The review text was sent successfully with reference {message_sid}. "
-            "No order has been placed."
+            f"Twilio accepted the review text with reference {result.sid}, but delivery is not "
+            "confirmed yet. No order has been placed."
         )
 
 
@@ -220,10 +240,25 @@ async def food_phone(ctx: agents.JobContext) -> None:
     ctx.log_context_fields = {"caller": caller, "room": ctx.room.name}
 
     session = AgentSession(
-        stt=inference.STT(model="deepgram/nova-3", language="en"),
-        llm=inference.LLM(model="google/gemma-4-31b-it"),
-        tts=inference.TTS(model="inworld/inworld-tts-2", voice="Ashley"),
-        turn_handling=agents.TurnHandlingOptions(turn_detection=inference.TurnDetector()),
+        llm=openai.realtime.RealtimeModel(
+            model="gpt-realtime",
+            voice="marin",
+            turn_detection=TurnDetection(
+                type="semantic_vad",
+                eagerness="low",
+                create_response=True,
+                interrupt_response=False,
+            ),
+        ),
+        turn_handling=TurnHandlingOptions(
+            interruption={
+                "mode": "adaptive",
+                "min_duration": 0.8,
+                "resume_false_interruption": True,
+                "false_interruption_timeout": 1.2,
+                "backchannel_boundary": (1.5, 1.0),
+            }
+        ),
     )
 
     if not _is_allowed_sip_caller(participant, settings):

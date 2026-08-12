@@ -23,6 +23,7 @@ Configure `.env.local`:
 LIVEKIT_URL=wss://YOUR_PROJECT.livekit.cloud
 LIVEKIT_API_KEY=...
 LIVEKIT_API_SECRET=...
+OPENAI_API_KEY=...
 
 ALLOWED_CALLER_NUMBERS=+1XXXXXXXXXX
 CALLER_NAME=Dad
@@ -42,9 +43,9 @@ Use E.164 phone numbers without spaces or punctuation.
 
 ## Add menus
 
-Replace the fake fixtures in `data/menus.json` before a real call. Each restaurant contains
-stable IDs, location details, source/freshness metadata, and categorized items with prices in
-cents. Preserve IDs across refreshes because the agent uses them in tool calls.
+`data/menus.json` contains the cached restaurant menus. Each restaurant includes stable IDs,
+location details, source/freshness metadata, and categorized items with prices in cents. Preserve
+IDs across refreshes because the agent uses them in tool calls.
 
 Do not scrape menus during a call. Refresh the file beforehand and treat delivery availability
 and marketplace prices as provisional until checkout.

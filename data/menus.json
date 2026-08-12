@@ -1,41 +1,2427 @@
 {
   "restaurants": [
     {
-      "id": "demo-bay-pizza",
-      "name": "Demo Bay Pizza",
-      "cuisine": "Pizza and Italian",
+      "id": "metro-diner-south-tampa",
+      "name": "Metro Diner - South Tampa",
+      "cuisine": "American Diner and Breakfast",
       "neighborhood": "South Tampa",
-      "address": "Replace with a real restaurant",
+      "address": "4011 West Kennedy Boulevard, Tampa, FL 33609",
       "phone": "",
-      "hours_note": "Demo data only; hours are not verified",
-      "source_url": "",
+      "hours_note": "Hours and delivery availability must be verified at checkout",
+      "source_url": "https://metrodiner.com/menu/",
       "refreshed_at": "2026-08-12T00:00:00Z",
       "items": [
-        {"id": "garlic-knots", "name": "Garlic Knots", "description": "Six baked knots with garlic butter and marinara", "price_cents": 699, "category": "Starters"},
-        {"id": "house-salad", "name": "House Salad", "description": "Mixed greens, tomatoes, onion, cucumber, and Italian dressing", "price_cents": 899, "category": "Starters"},
-        {"id": "cheese-pizza", "name": "Cheese Pizza", "description": "Hand-tossed pizza with tomato sauce and mozzarella", "price_cents": 1599, "category": "Pizza"},
-        {"id": "pepperoni-pizza", "name": "Pepperoni Pizza", "description": "Mozzarella, tomato sauce, and pepperoni", "price_cents": 1899, "category": "Pizza"},
-        {"id": "veggie-pizza", "name": "Garden Pizza", "description": "Mushrooms, peppers, onions, olives, and mozzarella", "price_cents": 1999, "category": "Pizza"},
-        {"id": "baked-ziti", "name": "Baked Ziti", "description": "Ziti baked with ricotta, tomato sauce, and mozzarella", "price_cents": 1699, "category": "Pasta"}
+        {
+          "id": "cinnamon-roll-pancakes",
+          "name": "Cinnamon Roll Pancakes",
+          "description": "",
+          "price_cents": 1049,
+          "category": "Pancakes & Waffles"
+        },
+        {
+          "id": "belgian-waffle",
+          "name": "Belgian Waffle",
+          "description": "",
+          "price_cents": 849,
+          "category": "Pancakes & Waffles"
+        },
+        {
+          "id": "fruity-waffle",
+          "name": "Fruity Waffle",
+          "description": "",
+          "price_cents": 999,
+          "category": "Pancakes & Waffles"
+        },
+        {
+          "id": "metro-pancakes",
+          "name": "Metro Pancakes",
+          "description": "",
+          "price_cents": 829,
+          "category": "Pancakes & Waffles"
+        },
+        {
+          "id": "croissant-french-toast",
+          "name": "Croissant French Toast",
+          "description": "",
+          "price_cents": 1149,
+          "category": "Pancakes & Waffles"
+        },
+        {
+          "id": "fried-chicken-and-waffle",
+          "name": "Fried Chicken & Waffle",
+          "description": "",
+          "price_cents": 1699,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "steak-and-scramble-bowl",
+          "name": "Steak & Scramble Bowl",
+          "description": "",
+          "price_cents": 1569,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "bissell-breakfast",
+          "name": "Bissell Breakfast",
+          "description": "",
+          "price_cents": 1249,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "biscuits-and-sausage-gravy",
+          "name": "Biscuits & Sausage Gravy",
+          "description": "",
+          "price_cents": 1299,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "avocado-toast",
+          "name": "Avocado Toast",
+          "description": "",
+          "price_cents": 969,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "oatmeal-breakfast",
+          "name": "Oatmeal Breakfast",
+          "description": "",
+          "price_cents": 629,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "bacon-avocado-scramble-bowl",
+          "name": "Bacon Avocado Scramble Bowl",
+          "description": "",
+          "price_cents": 1269,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "southwest-scramble-bowl",
+          "name": "Southwest Scramble Bowl",
+          "description": "",
+          "price_cents": 1269,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "meat-lovers-scramble-bowl",
+          "name": "Meat Lover's Scramble Bowl",
+          "description": "",
+          "price_cents": 1269,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "huevos-rancheros",
+          "name": "Huevos Rancheros",
+          "description": "",
+          "price_cents": 1349,
+          "category": "Breakfast Favorites"
+        },
+        {
+          "id": "three-egg-breakfast",
+          "name": "Three Egg Breakfast",
+          "description": "",
+          "price_cents": 1159,
+          "category": "Eggs & Omelets"
+        },
+        {
+          "id": "two-egg-breakfast",
+          "name": "Two Egg Breakfast",
+          "description": "",
+          "price_cents": 1129,
+          "category": "Eggs & Omelets"
+        },
+        {
+          "id": "protein-breakfast",
+          "name": "Protein Breakfast",
+          "description": "",
+          "price_cents": 1169,
+          "category": "Eggs & Omelets"
+        },
+        {
+          "id": "western-omelet",
+          "name": "Western Omelet",
+          "description": "",
+          "price_cents": 1279,
+          "category": "Eggs & Omelets"
+        },
+        {
+          "id": "veggie-omelet",
+          "name": "Veggie Omelet",
+          "description": "",
+          "price_cents": 1279,
+          "category": "Eggs & Omelets"
+        },
+        {
+          "id": "meat-lovers-omelet",
+          "name": "Meat Lovers Omelet",
+          "description": "",
+          "price_cents": 1279,
+          "category": "Eggs & Omelets"
+        },
+        {
+          "id": "french-toast-breakfast",
+          "name": "French Toast Breakfast",
+          "description": "",
+          "price_cents": 1479,
+          "category": "Eggs & Omelets"
+        },
+        {
+          "id": "croissant-french-toast-breakfast",
+          "name": "Croissant French Toast Breakfast",
+          "description": "",
+          "price_cents": 1579,
+          "category": "Eggs & Omelets"
+        },
+        {
+          "id": "avocado-breakfast-sandwich",
+          "name": "Avocado Breakfast Sandwich",
+          "description": "",
+          "price_cents": 1189,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "bacon-egg-and-cheese-croissant",
+          "name": "Bacon, Egg & Cheese Croissant",
+          "description": "",
+          "price_cents": 999,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "bbq-bacon-burger",
+          "name": "BBQ Bacon Burger",
+          "description": "",
+          "price_cents": 1429,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "breakfast-burger",
+          "name": "Breakfast Burger",
+          "description": "",
+          "price_cents": 1459,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "classic-burger",
+          "name": "Classic Burger",
+          "description": "",
+          "price_cents": 1269,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "double-decker-blt",
+          "name": "Double Decker BLT",
+          "description": "",
+          "price_cents": 1299,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "chicken-salad-croissant",
+          "name": "Chicken Salad Croissant",
+          "description": "",
+          "price_cents": 1169,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "fried-chicken-sandwich",
+          "name": "Fried Chicken Sandwich",
+          "description": "",
+          "price_cents": 1269,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "grilled-3-cheese",
+          "name": "Grilled 3 Cheese",
+          "description": "",
+          "price_cents": 829,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "loaded-burger-bowl",
+          "name": "Loaded Burger Bowl",
+          "description": "",
+          "price_cents": 1269,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "metro-club",
+          "name": "Metro Club",
+          "description": "",
+          "price_cents": 1529,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "philly-cheesesteak",
+          "name": "Philly Cheesesteak",
+          "description": "",
+          "price_cents": 1399,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "spicy-honey-chicken-biscuit",
+          "name": "Spicy Honey Chicken Biscuit",
+          "description": "",
+          "price_cents": 829,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "spicy-honey-chicken-sandwich",
+          "name": "Spicy Honey Chicken Sandwich",
+          "description": "",
+          "price_cents": 1149,
+          "category": "Burgers & Sandwiches"
+        },
+        {
+          "id": "boneless-wings",
+          "name": "Boneless Wings",
+          "description": "",
+          "price_cents": 1099,
+          "category": "Starters"
+        },
+        {
+          "id": "cheese-fries",
+          "name": "Cheese Fries",
+          "description": "",
+          "price_cents": 929,
+          "category": "Starters"
+        },
+        {
+          "id": "fltbrd-marg",
+          "name": "FLTBRD Marg",
+          "description": "",
+          "price_cents": 999,
+          "category": "Starters"
+        },
+        {
+          "id": "fltbrd-meat",
+          "name": "FLTBRD Meat",
+          "description": "",
+          "price_cents": 999,
+          "category": "Starters"
+        },
+        {
+          "id": "fried-cheese-curds",
+          "name": "Fried Cheese Curds",
+          "description": "",
+          "price_cents": 999,
+          "category": "Starters"
+        },
+        {
+          "id": "onion-rings",
+          "name": "Onion Rings",
+          "description": "",
+          "price_cents": 929,
+          "category": "Starters"
+        },
+        {
+          "id": "poutine",
+          "name": "Poutine",
+          "description": "",
+          "price_cents": 999,
+          "category": "Starters"
+        },
+        {
+          "id": "chicken-tender-salad",
+          "name": "Chicken Tender Salad",
+          "description": "",
+          "price_cents": 1229,
+          "category": "Entrée Salads & Soups"
+        },
+        {
+          "id": "chicken-caesar-salad",
+          "name": "Chicken Caesar Salad",
+          "description": "",
+          "price_cents": 1229,
+          "category": "Entrée Salads & Soups"
+        },
+        {
+          "id": "caesar-large",
+          "name": "Caesar Large",
+          "description": "",
+          "price_cents": 929,
+          "category": "Entrée Salads & Soups"
+        },
+        {
+          "id": "salad-large",
+          "name": "Salad Large",
+          "description": "",
+          "price_cents": 929,
+          "category": "Entrée Salads & Soups"
+        },
+        {
+          "id": "bowl-of-chicken-noodle",
+          "name": "Bowl of Chicken Noodle",
+          "description": "",
+          "price_cents": 599,
+          "category": "Entrée Salads & Soups"
+        },
+        {
+          "id": "cup-of-chicken-noodle",
+          "name": "Cup of Chicken Noodle",
+          "description": "",
+          "price_cents": 399,
+          "category": "Entrée Salads & Soups"
+        },
+        {
+          "id": "chicken-pot-pie",
+          "name": "Chicken Pot Pie",
+          "description": "",
+          "price_cents": 1329,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "chicken-tender-plate",
+          "name": "Chicken Tender Plate",
+          "description": "",
+          "price_cents": 1329,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "fish-and-chips",
+          "name": "Fish & Chips",
+          "description": "",
+          "price_cents": 1499,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "fried-chicken-plate",
+          "name": "Fried Chicken Plate",
+          "description": "",
+          "price_cents": 1699,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "iron-city-meatloaf",
+          "name": "Iron City Meatloaf",
+          "description": "",
+          "price_cents": 1429,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "ribs-and-chicken-combo",
+          "name": "Ribs & Chicken Combo",
+          "description": "",
+          "price_cents": 1999,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "ribs-half-rack",
+          "name": "Ribs 1/2 Rack",
+          "description": "",
+          "price_cents": 1699,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "ribs-full-rack",
+          "name": "Ribs Full Rack",
+          "description": "",
+          "price_cents": 2099,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "roasted-turkey-plate",
+          "name": "Roasted Turkey Plate",
+          "description": "",
+          "price_cents": 1449,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "shepherds-pie",
+          "name": "Shepherd's Pie",
+          "description": "",
+          "price_cents": 1329,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "steak-tips",
+          "name": "Steak Tips",
+          "description": "",
+          "price_cents": 1599,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "tangy-chicken-bowl",
+          "name": "Tangy Chicken Bowl",
+          "description": "",
+          "price_cents": 1169,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "teriyaki-salmon-plate",
+          "name": "Teriyaki Salmon Plate",
+          "description": "",
+          "price_cents": 1699,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "teriyaki-salmon-bowl",
+          "name": "Teriyaki Salmon Bowl",
+          "description": "",
+          "price_cents": 1689,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "teriyaki-steak-bowl",
+          "name": "Teriyaki Steak Bowl",
+          "description": "",
+          "price_cents": 1449,
+          "category": "Lunch & Dinner Favorites"
+        },
+        {
+          "id": "fried-chicken-and-waffles-for-4",
+          "name": "Fried Chicken & Waffles for 4",
+          "description": "",
+          "price_cents": 4900,
+          "category": "Family Meals"
+        },
+        {
+          "id": "fried-chicken-for-4",
+          "name": "Fried Chicken for 4",
+          "description": "",
+          "price_cents": 4900,
+          "category": "Family Meals"
+        },
+        {
+          "id": "iron-city-meatloaf-for-4",
+          "name": "Iron City Meatloaf for 4",
+          "description": "",
+          "price_cents": 5600,
+          "category": "Family Meals"
+        },
+        {
+          "id": "chicken-tenders-for-4",
+          "name": "Chicken Tenders for 4",
+          "description": "",
+          "price_cents": 4900,
+          "category": "Family Meals"
+        },
+        {
+          "id": "roasted-turkey-for-4",
+          "name": "Roasted Turkey for 4",
+          "description": "",
+          "price_cents": 5600,
+          "category": "Family Meals"
+        },
+        {
+          "id": "boneless-wing-pack",
+          "name": "Boneless Wing Pack",
+          "description": "",
+          "price_cents": 4400,
+          "category": "Family Meals"
+        },
+        {
+          "id": "the-bissell-platter-for-4",
+          "name": "The Bissell Platter for 4",
+          "description": "",
+          "price_cents": 4500,
+          "category": "Family Meals"
+        },
+        {
+          "id": "chicken-biscuits-for-4",
+          "name": "Chicken Biscuits for 4",
+          "description": "",
+          "price_cents": 2700,
+          "category": "Family Meals"
+        },
+        {
+          "id": "house-salad-for-4",
+          "name": "House Salad for 4",
+          "description": "",
+          "price_cents": 1200,
+          "category": "Family Meals"
+        },
+        {
+          "id": "caesar-salad-for-4",
+          "name": "Caesar Salad for 4",
+          "description": "",
+          "price_cents": 1200,
+          "category": "Family Meals"
+        },
+        {
+          "id": "freshly-brewed-coffee",
+          "name": "Freshly Brewed Coffee",
+          "description": "",
+          "price_cents": 2500,
+          "category": "Family Meals"
+        },
+        {
+          "id": "freshly-brewed-iced-tea",
+          "name": "Freshly Brewed Iced Tea",
+          "description": "",
+          "price_cents": 1500,
+          "category": "Family Meals"
+        },
+        {
+          "id": "family-meal-lemonade",
+          "name": "Lemonade",
+          "description": "",
+          "price_cents": 1500,
+          "category": "Family Meals"
+        },
+        {
+          "id": "family-meal-apple-juice",
+          "name": "Apple Juice",
+          "description": "",
+          "price_cents": 1400,
+          "category": "Family Meals"
+        },
+        {
+          "id": "chocolate-cake",
+          "name": "Chocolate Cake",
+          "description": "",
+          "price_cents": 599,
+          "category": "Desserts"
+        },
+        {
+          "id": "mashed-potatoes-and-gravy",
+          "name": "Mash Potatoes & Gravy",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "macaroni-and-cheese",
+          "name": "Macaroni and Cheese",
+          "description": "",
+          "price_cents": 429,
+          "category": "Sides"
+        },
+        {
+          "id": "green-beans",
+          "name": "Green Beans",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "fruit",
+          "name": "Fruit",
+          "description": "",
+          "price_cents": 429,
+          "category": "Sides"
+        },
+        {
+          "id": "french-fries",
+          "name": "French Fries",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "coleslaw",
+          "name": "Coleslaw",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "broccoli",
+          "name": "Broccoli",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "turkey-links",
+          "name": "Turkey Links",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "toast",
+          "name": "Toast",
+          "description": "",
+          "price_cents": 279,
+          "category": "Sides"
+        },
+        {
+          "id": "sausage-gravy-small",
+          "name": "Sausage Gravy Small",
+          "description": "",
+          "price_cents": 329,
+          "category": "Sides"
+        },
+        {
+          "id": "biscuit-and-gravy-side",
+          "name": "Biscuit & Gravy Side",
+          "description": "",
+          "price_cents": 699,
+          "category": "Sides"
+        },
+        {
+          "id": "sausage-gravy-large",
+          "name": "Sausage Gravy LG",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "sausage-patties",
+          "name": "Sausage Patties",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "sausage-links",
+          "name": "Sausage Links",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "home-fries",
+          "name": "Home Fries",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "hashbrowns",
+          "name": "Hashbrowns",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "ham-steak",
+          "name": "Ham Steak",
+          "description": "",
+          "price_cents": 379,
+          "category": "Sides"
+        },
+        {
+          "id": "grits",
+          "name": "Grits",
+          "description": "",
+          "price_cents": 299,
+          "category": "Sides"
+        },
+        {
+          "id": "fruit-bowl",
+          "name": "Fruit Bowl",
+          "description": "",
+          "price_cents": 599,
+          "category": "Sides"
+        },
+        {
+          "id": "cheese-grits",
+          "name": "Cheese Grits",
+          "description": "",
+          "price_cents": 349,
+          "category": "Sides"
+        },
+        {
+          "id": "canadian-bacon",
+          "name": "Canadian Bacon",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "bowl-of-grits",
+          "name": "Bowl of Grits",
+          "description": "",
+          "price_cents": 329,
+          "category": "Sides"
+        },
+        {
+          "id": "bowl-of-cheese-grits",
+          "name": "Bowl of Cheese Grits",
+          "description": "",
+          "price_cents": 449,
+          "category": "Sides"
+        },
+        {
+          "id": "bacon",
+          "name": "Bacon",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "3-eggs",
+          "name": "3 Eggs",
+          "description": "",
+          "price_cents": 450,
+          "category": "Sides"
+        },
+        {
+          "id": "2-eggs",
+          "name": "2 Eggs",
+          "description": "",
+          "price_cents": 300,
+          "category": "Sides"
+        },
+        {
+          "id": "2-biscuits",
+          "name": "2 Biscuits",
+          "description": "",
+          "price_cents": 369,
+          "category": "Sides"
+        },
+        {
+          "id": "1-egg",
+          "name": "1 Egg",
+          "description": "",
+          "price_cents": 150,
+          "category": "Sides"
+        },
+        {
+          "id": "1-biscuit",
+          "name": "1 Biscuit",
+          "description": "",
+          "price_cents": 189,
+          "category": "Sides"
+        },
+        {
+          "id": "stuffing",
+          "name": "Stuffing",
+          "description": "",
+          "price_cents": 399,
+          "category": "Sides"
+        },
+        {
+          "id": "kids-bissell",
+          "name": "Kid's Bissell",
+          "description": "",
+          "price_cents": 749,
+          "category": "Kid's Menu"
+        },
+        {
+          "id": "kids-grilled-cheese",
+          "name": "Kid's Grilled Cheese",
+          "description": "",
+          "price_cents": 599,
+          "category": "Kid's Menu"
+        },
+        {
+          "id": "kids-chicken-and-waffle",
+          "name": "Kid's Chicken & Waffle",
+          "description": "",
+          "price_cents": 879,
+          "category": "Kid's Menu"
+        },
+        {
+          "id": "kids-mac-and-cheese",
+          "name": "Kid's Mac & Cheese",
+          "description": "",
+          "price_cents": 599,
+          "category": "Kid's Menu"
+        },
+        {
+          "id": "kids-pancakes",
+          "name": "Kid's Pancakes",
+          "description": "",
+          "price_cents": 479,
+          "category": "Kid's Menu"
+        },
+        {
+          "id": "kids-platter",
+          "name": "Kid's Platter",
+          "description": "",
+          "price_cents": 699,
+          "category": "Kid's Menu"
+        },
+        {
+          "id": "kids-tenders",
+          "name": "Kid's Tenders",
+          "description": "",
+          "price_cents": 699,
+          "category": "Kid's Menu"
+        },
+        {
+          "id": "kids-waffle",
+          "name": "Kid's Waffle",
+          "description": "",
+          "price_cents": 499,
+          "category": "Kid's Menu"
+        },
+        {
+          "id": "coffee",
+          "name": "Coffee",
+          "description": "",
+          "price_cents": 369,
+          "category": "Beverages"
+        },
+        {
+          "id": "diet-coke",
+          "name": "Diet Coke",
+          "description": "",
+          "price_cents": 369,
+          "category": "Beverages"
+        },
+        {
+          "id": "coke",
+          "name": "Coke",
+          "description": "",
+          "price_cents": 369,
+          "category": "Beverages"
+        },
+        {
+          "id": "coke-zero",
+          "name": "Coke Zero",
+          "description": "",
+          "price_cents": 369,
+          "category": "Beverages"
+        },
+        {
+          "id": "sprite",
+          "name": "Sprite",
+          "description": "",
+          "price_cents": 369,
+          "category": "Beverages"
+        },
+        {
+          "id": "lemonade",
+          "name": "Lemonade",
+          "description": "",
+          "price_cents": 369,
+          "category": "Beverages"
+        },
+        {
+          "id": "sweet-tea",
+          "name": "Sweet Tea",
+          "description": "",
+          "price_cents": 369,
+          "category": "Beverages"
+        },
+        {
+          "id": "unsweet-tea",
+          "name": "Unsweet Tea",
+          "description": "",
+          "price_cents": 369,
+          "category": "Beverages"
+        },
+        {
+          "id": "milk",
+          "name": "Milk",
+          "description": "",
+          "price_cents": 359,
+          "category": "Beverages"
+        },
+        {
+          "id": "chocolate-milk",
+          "name": "Chocolate Milk",
+          "description": "",
+          "price_cents": 359,
+          "category": "Beverages"
+        },
+        {
+          "id": "apple-juice",
+          "name": "Apple Juice",
+          "description": "",
+          "price_cents": 399,
+          "category": "Beverages"
+        },
+        {
+          "id": "cranberry-juice",
+          "name": "Cranberry Juice",
+          "description": "",
+          "price_cents": 399,
+          "category": "Beverages"
+        },
+        {
+          "id": "orange-juice",
+          "name": "Orange Juice",
+          "description": "",
+          "price_cents": 399,
+          "category": "Beverages"
+        },
+        {
+          "id": "grapefruit-juice",
+          "name": "Grapefruit Juice",
+          "description": "",
+          "price_cents": 399,
+          "category": "Beverages"
+        },
+        {
+          "id": "pineapple-juice",
+          "name": "Pineapple Juice",
+          "description": "",
+          "price_cents": 399,
+          "category": "Beverages"
+        }
       ]
     },
     {
-      "id": "demo-palm-thai",
-      "name": "Demo Palm Thai Kitchen",
-      "cuisine": "Thai",
-      "neighborhood": "West Tampa",
-      "address": "Replace with a real restaurant",
-      "phone": "",
-      "hours_note": "Demo data only; hours are not verified",
-      "source_url": "",
+      "id": "jimbos-pit-bar-b-q",
+      "name": "Jimbo's Pit Bar B-Q",
+      "cuisine": "Barbecue and Breakfast",
+      "neighborhood": "South Tampa",
+      "address": "4103 West Kennedy Boulevard, Tampa, FL 33609",
+      "phone": "+18132899724",
+      "hours_note": "PDF export includes breakfast only; Monday-Saturday 7 AM-9 PM; Sunday closed; delivery availability must be verified at checkout",
+      "source_url": "https://www.jimbosbarbq.com",
       "refreshed_at": "2026-08-12T00:00:00Z",
       "items": [
-        {"id": "spring-rolls", "name": "Vegetable Spring Rolls", "description": "Crispy rolls with sweet chili sauce", "price_cents": 795, "category": "Appetizers"},
-        {"id": "satay", "name": "Chicken Satay", "description": "Grilled chicken skewers with peanut sauce", "price_cents": 1095, "category": "Appetizers"},
-        {"id": "pad-thai", "name": "Pad Thai", "description": "Rice noodles with egg, bean sprouts, scallions, peanuts, and choice of protein", "price_cents": 1695, "category": "Noodles"},
-        {"id": "drunken-noodles", "name": "Drunken Noodles", "description": "Wide rice noodles with basil, vegetables, chili, and choice of protein", "price_cents": 1795, "category": "Noodles"},
-        {"id": "green-curry", "name": "Green Curry", "description": "Coconut green curry with bamboo shoots, basil, vegetables, and choice of protein", "price_cents": 1795, "category": "Curries"},
-        {"id": "mango-sticky-rice", "name": "Mango Sticky Rice", "description": "Sweet coconut sticky rice with ripe mango", "price_cents": 895, "category": "Desserts"}
+        {
+          "id": "good-morning-special",
+          "name": "Good Morning Special",
+          "description": "Two eggs, choice of meat, Jimbo's homefries or grits, plus toast or biscuit.",
+          "price_cents": 1199,
+          "category": "Main"
+        },
+        {
+          "id": "meatless-breakfast",
+          "name": "Meatless Breakfast",
+          "description": "Two eggs, grits or homefries, toast or biscuit.",
+          "price_cents": 975,
+          "category": "Main"
+        },
+        {
+          "id": "pancakes",
+          "name": "Pancakes",
+          "description": "3 pancakes with syrup and butter; sugar-free syrup available.",
+          "price_cents": 950,
+          "category": "Main"
+        },
+        {
+          "id": "french-toast",
+          "name": "French Toast",
+          "description": "3 slices with syrup and butter.",
+          "price_cents": 950,
+          "category": "Main"
+        },
+        {
+          "id": "biscuit-and-gravy",
+          "name": "Biscuit & Gravy",
+          "description": "One homemade biscuit and a bowl of sausage gravy.",
+          "price_cents": 775,
+          "category": "Main"
+        },
+        {
+          "id": "build-your-own-omelet",
+          "name": "Build Your Own Omelet",
+          "description": "Grits or home fries, toast or biscuit.",
+          "price_cents": 950,
+          "category": "Omelets"
+        },
+        {
+          "id": "omelet-with-cheese-add",
+          "name": "With Cheese Add",
+          "description": "",
+          "price_cents": 135,
+          "category": "Omelets"
+        },
+        {
+          "id": "omelet-add-one-meat",
+          "name": "Add One Meat",
+          "description": "Choice of ham, smoked sausage, sausage patty or bacon.",
+          "price_cents": 150,
+          "category": "Omelets"
+        },
+        {
+          "id": "omelet-add-veggies",
+          "name": "Add Veggies",
+          "description": "Green pepper, onion, tomato, mushroom or spinach.",
+          "price_cents": 69,
+          "category": "Omelets"
+        },
+        {
+          "id": "breakfast-sandwich",
+          "name": "Breakfast Sandwich",
+          "description": "One fried or scrambled egg with ham, bacon or sausage on a biscuit, muffin or toast (white, wheat or rye).",
+          "price_cents": 799,
+          "category": "Breakfast Sandwiches"
+        },
+        {
+          "id": "breakfast-sandwich-meat-only",
+          "name": "Meat Only",
+          "description": "",
+          "price_cents": 685,
+          "category": "Breakfast Sandwiches"
+        },
+        {
+          "id": "breakfast-sandwich-egg-only",
+          "name": "Egg Only",
+          "description": "",
+          "price_cents": 535,
+          "category": "Breakfast Sandwiches"
+        },
+        {
+          "id": "breakfast-sandwich-cheese",
+          "name": "Cheese",
+          "description": "",
+          "price_cents": 135,
+          "category": "Breakfast Sandwiches"
+        },
+        {
+          "id": "one-egg",
+          "name": "One Egg",
+          "description": "Any style.",
+          "price_cents": 245,
+          "category": "Sides"
+        },
+        {
+          "id": "grits",
+          "name": "Grits",
+          "description": "",
+          "price_cents": 340,
+          "category": "Sides"
+        },
+        {
+          "id": "jimbos-homefries",
+          "name": "Jimbo's Homefries",
+          "description": "",
+          "price_cents": 410,
+          "category": "Sides"
+        },
+        {
+          "id": "bacon-3-slices",
+          "name": "Bacon (3 Slices)",
+          "description": "",
+          "price_cents": 470,
+          "category": "Sides"
+        },
+        {
+          "id": "ham",
+          "name": "Ham",
+          "description": "",
+          "price_cents": 470,
+          "category": "Sides"
+        },
+        {
+          "id": "smoked-sausage",
+          "name": "Smoked Sausage",
+          "description": "",
+          "price_cents": 470,
+          "category": "Sides"
+        },
+        {
+          "id": "patty-sausage-2",
+          "name": "Patty Sausage (2)",
+          "description": "",
+          "price_cents": 470,
+          "category": "Sides"
+        },
+        {
+          "id": "gravy",
+          "name": "Gravy",
+          "description": "",
+          "price_cents": 490,
+          "category": "Sides"
+        },
+        {
+          "id": "toast",
+          "name": "Toast",
+          "description": "",
+          "price_cents": 250,
+          "category": "Sides"
+        },
+        {
+          "id": "biscuit",
+          "name": "Biscuit",
+          "description": "",
+          "price_cents": 290,
+          "category": "Sides"
+        },
+        {
+          "id": "english-muffin",
+          "name": "English Muffin",
+          "description": "",
+          "price_cents": 290,
+          "category": "Sides"
+        }
+      ]
+    },
+    {
+      "id": "4-rivers-smokehouse-south-tampa",
+      "name": "4 Rivers Smokehouse",
+      "cuisine": "Barbecue",
+      "neighborhood": "South Tampa",
+      "address": "623 South MacDill Avenue, Tampa, FL 33609",
+      "phone": "",
+      "hours_note": "Menu prices may vary by location; hours and delivery availability must be verified at checkout",
+      "source_url": "https://www.4rsmokehouse.com/menu/",
+      "refreshed_at": "2026-08-12T00:00:00Z",
+      "items": [
+        {
+          "id": "1x2-platter",
+          "name": "1×2 Platter",
+          "description": "Choice of 1 meat and 2 classic sides. Meat choices are brisket, pulled pork, burnt ends, pulled chicken, smoked turkey, Texas sausage, vegan burnt ends, or 1/4 ribs. Brisket is +$2.79.",
+          "price_cents": 1399,
+          "category": "BBQ Platters"
+        },
+        {
+          "id": "1x2-platter-quarter-bone-in-chicken",
+          "name": "1×2 Platter - 1/4 Bone-In Chicken",
+          "description": "1/4 bone-in chicken and 2 classic sides.",
+          "price_cents": 899,
+          "category": "BBQ Platters"
+        },
+        {
+          "id": "2x2-platter",
+          "name": "2×2 Platter",
+          "description": "Choice of 2 meats and 2 classic sides. Meat choices are brisket, pulled pork, burnt ends, pulled chicken, smoked turkey, Texas sausage, vegan burnt ends, 1/4 ribs, or bone-in chicken. Brisket is +$2.79 and 1/4 ribs are +$2.99.",
+          "price_cents": 1699,
+          "category": "BBQ Platters"
+        },
+        {
+          "id": "3x2-platter",
+          "name": "3×2 Platter",
+          "description": "Choice of 3 meats and 2 classic sides. Meat choices are brisket, pulled pork, burnt ends, pulled chicken, smoked turkey, Texas sausage, vegan burnt ends, 1/4 ribs, or bone-in chicken. Brisket is +$2.79 and 1/4 ribs are +$2.99.",
+          "price_cents": 1999,
+          "category": "BBQ Platters"
+        },
+        {
+          "id": "st-louis-style-ribs-half-rack",
+          "name": "St. Louis Style Ribs - Half Rack",
+          "description": "Pork ribs seasoned with 4R All Purpose Rub, smoked and finished on the grill with Honey BBQ sauce. Comes with two classic sides.",
+          "price_cents": 1989,
+          "category": "Ribs"
+        },
+        {
+          "id": "st-louis-style-ribs-full-rack",
+          "name": "St. Louis Style Ribs - Full Rack",
+          "description": "Pork ribs seasoned with 4R All Purpose Rub, smoked and finished on the grill with Honey BBQ sauce. Comes with two classic sides.",
+          "price_cents": 3429,
+          "category": "Ribs"
+        },
+        {
+          "id": "happy-herd",
+          "name": "Happy Herd",
+          "description": "Feeds a family of 4 with 4 different meats, 2 classic sides, and 4 of your choice of bread. Brisket is +$3.49.",
+          "price_cents": 5499,
+          "category": "BBQ Samplers"
+        },
+        {
+          "id": "farmhouse-salad",
+          "name": "Farmhouse Salad",
+          "description": "Kale spring mix and romaine, roasted chickpeas, cucumber, tomatoes, onions, corn, cheddar cheese, and Texas Cornbread croutons. Dressing choices are ranch, blue cheese, balsamic vinaigrette, or smoked tomato vinaigrette.",
+          "price_cents": 959,
+          "category": "Fresh Eats"
+        },
+        {
+          "id": "signature-angus-brisket-sandwich",
+          "name": "Signature Angus Brisket Sandwich",
+          "description": "30-day wet-aged beef brisket rubbed with 4R Brisket Rub and smoked for 18 hours. Hand sliced to order.",
+          "price_cents": 1099,
+          "category": "BBQ Classic Sandwiches"
+        },
+        {
+          "id": "pulled-pork-sandwich",
+          "name": "Pulled Pork Sandwich",
+          "description": "Bone-in pork shoulder rubbed with 4R All Purpose Rub and smoked for 12 hours until fork-tender. Hand-pulled to order.",
+          "price_cents": 879,
+          "category": "BBQ Classic Sandwiches"
+        },
+        {
+          "id": "pulled-chicken-sandwich",
+          "name": "Pulled Chicken Sandwich",
+          "description": "Seasoned with 4R All Purpose Rub, smoked, chopped, and tossed in 4R Signature Sauce.",
+          "price_cents": 879,
+          "category": "BBQ Classic Sandwiches"
+        },
+        {
+          "id": "burnt-ends-sandwich",
+          "name": "Burnt Ends Sandwich",
+          "description": "Chopped brisket and pulled pork, smoked in 4R Signature Sauce.",
+          "price_cents": 929,
+          "category": "BBQ Classic Sandwiches"
+        },
+        {
+          "id": "texas-sausage-sandwich",
+          "name": "Texas Sausage Sandwich",
+          "description": "Beef and pork sausage housemade by a family-owned company in Texas, smoked and packed full of flavor.",
+          "price_cents": 999,
+          "category": "BBQ Classic Sandwiches"
+        },
+        {
+          "id": "smokehouse-sliders-3",
+          "name": "Smokehouse Sliders (3)",
+          "description": "Choice of three meats drizzled with 4R Signature Sauce.",
+          "price_cents": 1079,
+          "category": "BBQ Classic Sandwiches"
+        },
+        {
+          "id": "vegan-burnt-ends-sandwich",
+          "name": "Vegan Burnt Ends Sandwich",
+          "description": "100% plant-based meat alternative double smoked with vegan BBQ sauce and slow-roasted until caramelized.",
+          "price_cents": 1099,
+          "category": "BBQ Classic Sandwiches"
+        },
+        {
+          "id": "smoked-turkey-sandwich",
+          "name": "Smoked Turkey Sandwich",
+          "description": "",
+          "price_cents": 929,
+          "category": "BBQ Classic Sandwiches"
+        },
+        {
+          "id": "coop-chicken-tenders",
+          "name": "Coop Chicken Tenders",
+          "description": "3-piece chicken tenders.",
+          "price_cents": 899,
+          "category": "John Rivers Originals"
+        },
+        {
+          "id": "bbq-melt",
+          "name": "BBQ Melt",
+          "description": "Choice of burnt ends, pulled pork, or pulled chicken with provolone and cheddar cheese, topped with caramelized onions on sliced sourdough bread.",
+          "price_cents": 999,
+          "category": "John Rivers Originals"
+        },
+        {
+          "id": "texas-destroyer",
+          "name": "Texas Destroyer",
+          "description": "Signature Angus brisket topped with onion rings, jalapeños, melted provolone, and 4R Signature Sauce on a brioche bun.",
+          "price_cents": 1099,
+          "category": "John Rivers Originals"
+        },
+        {
+          "id": "cuban-sandwich",
+          "name": "Cuban Sandwich",
+          "description": "Smoked pork and ham, mustard, mojo, pickles, onion rings, melted provolone, and 4R Signature Sauce, stacked high, pressed, and grilled.",
+          "price_cents": 999,
+          "category": "John Rivers Originals"
+        },
+        {
+          "id": "bbq-quesadilla",
+          "name": "BBQ Quesadilla",
+          "description": "Choice of meat, cheddar cheese, and 4R Signature Sauce on a tortilla, grilled to perfection. Brisket is +$2.79.",
+          "price_cents": 979,
+          "category": "John Rivers Originals"
+        },
+        {
+          "id": "six-shooter",
+          "name": "Six Shooter",
+          "description": "Baked cheese grits piled high with pulled pork, Southern Coleslaw, pickles, jalapeños, and 4R Signature Sauce.",
+          "price_cents": 999,
+          "category": "John Rivers Originals"
+        },
+        {
+          "id": "bbq-street-tacos",
+          "name": "BBQ Street Tacos",
+          "description": "Three grilled tortillas loaded with choice of meat, pico de gallo, queso fresco, guasacaca, creme fraiche, and fresh chopped cilantro.",
+          "price_cents": 1079,
+          "category": "John Rivers Originals"
+        },
+        {
+          "id": "messy-pig",
+          "name": "Messy Pig",
+          "description": "Pulled pork between two layers of coleslaw, topped with pickles, jalapeños, and 4R Signature Sauce on a brioche bun.",
+          "price_cents": 999,
+          "category": "John Rivers Originals"
+        },
+        {
+          "id": "4r-bbq-beans",
+          "name": "4R BBQ Beans",
+          "description": "4R baked beans with brisket and pork.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "4r-bbq-beans-pint",
+          "name": "4R BBQ Beans - Pint",
+          "description": "4R baked beans with brisket and pork.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "4r-bbq-beans-quart",
+          "name": "4R BBQ Beans - Quart",
+          "description": "4R baked beans with brisket and pork.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "new-cheesy-potatoes",
+          "name": "New Cheesy Potatoes",
+          "description": "Cheddar cheese casserole, hashbrowns, and Campbell's Cream of Chicken soup.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "new-cheesy-potatoes-pint",
+          "name": "New Cheesy Potatoes - Pint",
+          "description": "Cheddar cheese casserole, hashbrowns, and Campbell's Cream of Chicken soup.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "new-cheesy-potatoes-quart",
+          "name": "New Cheesy Potatoes - Quart",
+          "description": "Cheddar cheese casserole, hashbrowns, and Campbell's Cream of Chicken soup.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "mac-and-cheese",
+          "name": "Mac & Cheese",
+          "description": "Classic, creamy mac and cheese.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "mac-and-cheese-pint",
+          "name": "Mac & Cheese - Pint",
+          "description": "Classic, creamy mac and cheese.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "mac-and-cheese-quart",
+          "name": "Mac & Cheese - Quart",
+          "description": "Classic, creamy mac and cheese.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "texas-cornbread",
+          "name": "Texas Cornbread",
+          "description": "Traditional cornbread with cheddar cheese and jalapeños.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "texas-cornbread-pint",
+          "name": "Texas Cornbread - Pint",
+          "description": "Traditional cornbread with cheddar cheese and jalapeños.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "texas-cornbread-quart",
+          "name": "Texas Cornbread - Quart",
+          "description": "Traditional cornbread with cheddar cheese and jalapeños.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "fried-okra",
+          "name": "Fried Okra",
+          "description": "Seasoned okra, breaded and crispy fried. Vegan-friendly.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "fried-okra-pint",
+          "name": "Fried Okra - Pint",
+          "description": "Seasoned okra, breaded and crispy fried. Vegan-friendly.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "fried-okra-quart",
+          "name": "Fried Okra - Quart",
+          "description": "Seasoned okra, breaded and crispy fried. Vegan-friendly.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "collard-greens",
+          "name": "Collard Greens",
+          "description": "Collard greens simmered with smoked ham and vinegar.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "collard-greens-pint",
+          "name": "Collard Greens - Pint",
+          "description": "Collard greens simmered with smoked ham and vinegar.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "collard-greens-quart",
+          "name": "Collard Greens - Quart",
+          "description": "Collard greens simmered with smoked ham and vinegar.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "baked-cheese-grits",
+          "name": "Baked Cheese Grits",
+          "description": "Grits cooked with a savory blend of cheeses and spices, baked until golden brown.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "baked-cheese-grits-pint",
+          "name": "Baked Cheese Grits - Pint",
+          "description": "Grits cooked with a savory blend of cheeses and spices, baked until golden brown.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "baked-cheese-grits-quart",
+          "name": "Baked Cheese Grits - Quart",
+          "description": "Grits cooked with a savory blend of cheeses and spices, baked until golden brown.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "southern-green-beans",
+          "name": "Southern Green Beans",
+          "description": "Green beans in a flavorful broth with smoked bacon.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "southern-green-beans-pint",
+          "name": "Southern Green Beans - Pint",
+          "description": "Green beans in a flavorful broth with smoked bacon.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "southern-green-beans-quart",
+          "name": "Southern Green Beans - Quart",
+          "description": "Green beans in a flavorful broth with smoked bacon.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "french-fries",
+          "name": "French Fries",
+          "description": "Seasoned crinkle-cut fries. Vegan-friendly.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "french-fries-pint",
+          "name": "French Fries - Pint",
+          "description": "Seasoned crinkle-cut fries. Vegan-friendly.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "french-fries-quart",
+          "name": "French Fries - Quart",
+          "description": "Seasoned crinkle-cut fries. Vegan-friendly.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "southern-coleslaw",
+          "name": "Southern Coleslaw",
+          "description": "Fresh cabbage and carrots with a sweet dressing.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "southern-coleslaw-pint",
+          "name": "Southern Coleslaw - Pint",
+          "description": "Fresh cabbage and carrots with a sweet dressing.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "southern-coleslaw-quart",
+          "name": "Southern Coleslaw - Quart",
+          "description": "Fresh cabbage and carrots with a sweet dressing.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "bananas-foster-bread-pudding",
+          "name": "Bananas Foster Bread Pudding",
+          "description": "Fresh brioche bread baked in a sweet custard with sliced bananas and drizzled with a caramel Bananas Foster topping. Rotates weekly.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "bananas-foster-bread-pudding-pint",
+          "name": "Bananas Foster Bread Pudding - Pint",
+          "description": "Fresh brioche bread baked in a sweet custard with sliced bananas and drizzled with a caramel Bananas Foster topping. Rotates weekly.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "bananas-foster-bread-pudding-quart",
+          "name": "Bananas Foster Bread Pudding - Quart",
+          "description": "Fresh brioche bread baked in a sweet custard with sliced bananas and drizzled with a caramel Bananas Foster topping. Rotates weekly.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "crispy-cream-bread-pudding",
+          "name": "Crispy Cream Bread Pudding",
+          "description": "Fresh brioche bread baked in a creamy custard with crushed pineapple, cinnamon, and raisins, topped with homemade doughnut glaze. Rotates quarterly.",
+          "price_cents": 319,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "crispy-cream-bread-pudding-pint",
+          "name": "Crispy Cream Bread Pudding - Pint",
+          "description": "Fresh brioche bread baked in a creamy custard with crushed pineapple, cinnamon, and raisins, topped with homemade doughnut glaze. Rotates quarterly.",
+          "price_cents": 729,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "crispy-cream-bread-pudding-quart",
+          "name": "Crispy Cream Bread Pudding - Quart",
+          "description": "Fresh brioche bread baked in a creamy custard with crushed pineapple, cinnamon, and raisins, topped with homemade doughnut glaze. Rotates quarterly.",
+          "price_cents": 1209,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "smokehouse-corn",
+          "name": "Smokehouse Corn",
+          "description": "Locally sourced corn fresh off the cob, sautéed with smoked tomatoes, spices, and garlic, then topped with cilantro.",
+          "price_cents": 398,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "smokehouse-corn-pint",
+          "name": "Smokehouse Corn - Pint",
+          "description": "Locally sourced corn fresh off the cob, sautéed with smoked tomatoes, spices, and garlic, then topped with cilantro.",
+          "price_cents": 959,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "smokehouse-corn-quart",
+          "name": "Smokehouse Corn - Quart",
+          "description": "Locally sourced corn fresh off the cob, sautéed with smoked tomatoes, spices, and garlic, then topped with cilantro.",
+          "price_cents": 1619,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "side-sampler",
+          "name": "Side Sampler",
+          "description": "3 classic sides and choice of bread.",
+          "price_cents": 899,
+          "category": "Homestyle Sides"
+        },
+        {
+          "id": "kids-brisket-slider",
+          "name": "Kids Brisket Slider",
+          "description": "Signature smoked Angus brisket between a slider bun. Includes one side, a cookie, and a fountain drink.",
+          "price_cents": 769,
+          "category": "Kids Meals"
+        },
+        {
+          "id": "kids-pulled-chicken-slider",
+          "name": "Kids Pulled Chicken Slider",
+          "description": "Tender pulled chicken between a slider bun. Includes one side, a cookie, and a fountain drink.",
+          "price_cents": 769,
+          "category": "Kids Meals"
+        },
+        {
+          "id": "kids-pulled-pork-slider",
+          "name": "Kids Pulled Pork Slider",
+          "description": "Southern pulled pork between a slider bun. Includes one side, a cookie, and a fountain drink.",
+          "price_cents": 769,
+          "category": "Kids Meals"
+        },
+        {
+          "id": "kids-hot-dog",
+          "name": "Kids Hot Dog",
+          "description": "Hot dog split down the center and grilled. Includes one side, a cookie, and a fountain drink.",
+          "price_cents": 769,
+          "category": "Kids Meals"
+        },
+        {
+          "id": "kids-grilled-cheese-sandwich",
+          "name": "Kids Grilled Cheese Sandwich",
+          "description": "Includes one side, a cookie, and a fountain drink.",
+          "price_cents": 769,
+          "category": "Kids Meals"
+        },
+        {
+          "id": "kids-chicken-tenders",
+          "name": "Kids Chicken Tenders",
+          "description": "Includes one side, a cookie, and a fountain drink.",
+          "price_cents": 769,
+          "category": "Kids Meals"
+        },
+        {
+          "id": "fountain-drink-medium",
+          "name": "Fountain Drink - Medium",
+          "description": "",
+          "price_cents": 299,
+          "category": "Drinks"
+        },
+        {
+          "id": "fountain-drink-large",
+          "name": "Fountain Drink - Large",
+          "description": "",
+          "price_cents": 379,
+          "category": "Drinks"
+        },
+        {
+          "id": "sweet-or-unsweet-tea-medium",
+          "name": "Sweet or Unsweet Tea - Medium",
+          "description": "",
+          "price_cents": 299,
+          "category": "Drinks"
+        },
+        {
+          "id": "sweet-or-unsweet-tea-large",
+          "name": "Sweet or Unsweet Tea - Large",
+          "description": "",
+          "price_cents": 379,
+          "category": "Drinks"
+        },
+        {
+          "id": "signature-angus-brisket-half-pound",
+          "name": "Signature Angus Brisket - Half Pound",
+          "description": "",
+          "price_cents": 1419,
+          "category": "A La Carte"
+        },
+        {
+          "id": "st-louis-ribs-quarter-rack-a-la-carte",
+          "name": "St. Louis Ribs - 1/4 Rack",
+          "description": "",
+          "price_cents": 879,
+          "category": "A La Carte"
+        },
+        {
+          "id": "st-louis-ribs-half-rack-a-la-carte",
+          "name": "St. Louis Ribs - 1/2 Rack",
+          "description": "",
+          "price_cents": 1699,
+          "category": "A La Carte"
+        },
+        {
+          "id": "st-louis-ribs-full-rack-a-la-carte",
+          "name": "St. Louis Ribs - Full Rack",
+          "description": "",
+          "price_cents": 3199,
+          "category": "A La Carte"
+        },
+        {
+          "id": "smoked-chicken-bone-in-quarter",
+          "name": "Smoked Chicken (Bone-In) - 1/4 Chicken",
+          "description": "",
+          "price_cents": 529,
+          "category": "A La Carte"
+        },
+        {
+          "id": "smoked-chicken-bone-in-half",
+          "name": "Smoked Chicken (Bone-In) - 1/2 Chicken",
+          "description": "",
+          "price_cents": 979,
+          "category": "A La Carte"
+        },
+        {
+          "id": "smoked-chicken-bone-in-whole",
+          "name": "Smoked Chicken (Bone-In) - Whole Chicken",
+          "description": "",
+          "price_cents": 1959,
+          "category": "A La Carte"
+        },
+        {
+          "id": "pulled-pork-half-pound",
+          "name": "Pulled Pork - Half Pound",
+          "description": "",
+          "price_cents": 879,
+          "category": "A La Carte"
+        },
+        {
+          "id": "pulled-chicken-half-pound",
+          "name": "Pulled Chicken - Half Pound",
+          "description": "",
+          "price_cents": 879,
+          "category": "A La Carte"
+        },
+        {
+          "id": "burnt-ends-half-pound",
+          "name": "Burnt Ends - Half Pound",
+          "description": "Chopped brisket and pork.",
+          "price_cents": 929,
+          "category": "A La Carte"
+        },
+        {
+          "id": "texas-sausage-half-pound",
+          "name": "Texas Sausage - Half Pound",
+          "description": "",
+          "price_cents": 929,
+          "category": "A La Carte"
+        },
+        {
+          "id": "smoked-turkey-half-pound",
+          "name": "Smoked Turkey - Half Pound",
+          "description": "",
+          "price_cents": 1249,
+          "category": "A La Carte"
+        },
+        {
+          "id": "vegan-burnt-ends-half-pound",
+          "name": "Vegan Burnt Ends - Half Pound",
+          "description": "",
+          "price_cents": 1069,
+          "category": "A La Carte"
+        },
+        {
+          "id": "smokehouse-wings-10",
+          "name": "Smokehouse Wings - 10",
+          "description": "Smoked jumbo wings with 4R All Purpose Rub and choice of 4R Signature BBQ Sauce or Buffalo Sauce. Includes ranch or blue cheese.",
+          "price_cents": 1399,
+          "category": "A La Carte"
+        },
+        {
+          "id": "smokehouse-wings-50",
+          "name": "Smokehouse Wings - 50",
+          "description": "Smoked jumbo wings with 4R All Purpose Rub and choice of 4R Signature BBQ Sauce or Buffalo Sauce. Includes ranch or blue cheese.",
+          "price_cents": 6499,
+          "category": "A La Carte"
+        },
+        {
+          "id": "smokehouse-wings-100",
+          "name": "Smokehouse Wings - 100",
+          "description": "Smoked jumbo wings with 4R All Purpose Rub and choice of 4R Signature BBQ Sauce or Buffalo Sauce. Includes ranch or blue cheese.",
+          "price_cents": 12599,
+          "category": "A La Carte"
+        },
+        {
+          "id": "coconut-bomb",
+          "name": "Coconut Bomb",
+          "description": "Coconut butter cake with vanilla mousse, house frosting, and coconut shreds.",
+          "price_cents": 499,
+          "category": "4R Bakery"
+        },
+        {
+          "id": "classic-brownie",
+          "name": "Classic Brownie",
+          "description": "Rich, fudgy classic chocolate brownie.",
+          "price_cents": 409,
+          "category": "4R Bakery"
+        },
+        {
+          "id": "bayou-bar",
+          "name": "Bayou Bar",
+          "description": "Pecan shortbread crust with a sweet cream cheese filling.",
+          "price_cents": 409,
+          "category": "4R Bakery"
+        },
+        {
+          "id": "caramel-dolly-bar",
+          "name": "Caramel Dolly Bar",
+          "description": "Graham cracker crust with layers of coconut, pecans, caramel bits, and chocolate chips baked with sweetened condensed milk.",
+          "price_cents": 409,
+          "category": "4R Bakery"
+        },
+        {
+          "id": "monster-cookie-bar",
+          "name": "Monster Cookie Bar",
+          "description": "Gluten-free bar loaded with oats, peanut butter, chocolate chips, caramel bits, and M&Ms.",
+          "price_cents": 409,
+          "category": "4R Bakery"
+        },
+        {
+          "id": "johns-chocolate-chip-cookie",
+          "name": "John's Chocolate Chip Cookie",
+          "description": "Buttery chocolate chip cookie studded with dark chocolate chips and chocolate chunks, topped with festive M&Ms.",
+          "price_cents": 409,
+          "category": "4R Bakery"
+        },
+        {
+          "id": "reeses-cookie",
+          "name": "Reese's Cookie",
+          "description": "Peanut butter cookie studded with halves of Reese's cups.",
+          "price_cents": 409,
+          "category": "4R Bakery"
+        },
+        {
+          "id": "texas-sheetcake",
+          "name": "Texas Sheetcake",
+          "description": "",
+          "price_cents": 599,
+          "category": "Smokehouse Desserts"
+        },
+        {
+          "id": "carrot-cake-sugar-free-gluten-friendly",
+          "name": "Carrot Cake (Sugar Free & Gluten Friendly)",
+          "description": "",
+          "price_cents": 699,
+          "category": "Smokehouse Desserts"
+        }
+      ]
+    },
+    {
+      "id": "anthonys-coal-fired-pizza-south-tampa",
+      "name": "Anthony's Coal Fired Pizza & Wings",
+      "cuisine": "Pizza, Wings, and Italian",
+      "neighborhood": "South Tampa",
+      "address": "1901 South Dale Mabry Highway, Tampa, FL 33629",
+      "phone": "",
+      "hours_note": "Location prices, hours, and delivery availability must be verified at checkout",
+      "source_url": "https://acfp.com/menu/",
+      "refreshed_at": "2026-08-12T00:00:00Z",
+      "items": [
+        {
+          "id": "lunch-10-inch-cheese-pizza-beverage",
+          "name": "10\" Cheese Pizza + Beverage",
+          "description": "Mozzarella, our Italian plum tomato sauce, and hand-grated Romano",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-10-inch-pepperoni-pizza-beverage",
+          "name": "10\" Pepperoni Pizza + Beverage",
+          "description": "Mozzarella, our Italian plum tomato sauce, pepperoni, and hand-grated Romano",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-stromboli-pepperoni-italian-sausage-beverage",
+          "name": "Stromboli with Pepperoni & Italian Sausage + Beverage",
+          "description": "Our signature pizza dough folded with our Italian plum tomato sauce, pepperoni & Italian sausage, mozzarella, and hand-grated Romano",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-7-roasted-chicken-wings-beverage",
+          "name": "7 Roasted Chicken Wings + Beverage",
+          "description": "Fresh, coal-oven-roasted chicken wings served with focaccia bread upon request.",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-italian-sausage-peppers-sandwich-beverage",
+          "name": "Italian Sausage & Peppers Sandwich + Beverage",
+          "description": "Italian sausage recipe with mozzarella, caramelized onions, and roasted peppers served on our homemade focaccia bread with a side of our tomato sauce",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-meatball-long-hot-mozzarella-sandwich-beverage",
+          "name": "Meatball with Long Hot & Mozzarella Sandwich + Beverage",
+          "description": "Meatballs, mozzarella, and a long, hot finger pepper served on our homemade focaccia bread",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-spaghetti-meatball-beverage",
+          "name": "Spaghetti & Meatball + Beverage",
+          "description": "Al dente pasta, homemade meatballs, and our Italian plum tomato sauce, sprinkled with hand-grated Romano cheese. Served with focaccia bread upon request.",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-fettuccine-alfredo-beverage",
+          "name": "Fettuccine Alfredo + Beverage",
+          "description": "Fettuccine pasta tossed in a sauce made from butter, heavy cream, and hand-grated Parmesan cheese. Served with focaccia bread upon request.",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-choice-salad-soup",
+          "name": "Choice of Salad & Soup",
+          "description": "Cup of Pasta Fagioli with a choice of Anthony's Italian Salad, Caesar Salad, or Chopped Salad",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-choice-sandwich-soup",
+          "name": "Choice of Sandwich & Soup",
+          "description": "Cup of Pasta Fagioli with a choice of Coal Oven Roasted Chicken, Italian Tuna Salad, Long Hot Meatball Mozzarella, Burrata & Prosciutto, or Italian Sausage & Peppers sandwich",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "lunch-choice-sandwich-salad",
+          "name": "Choice of Sandwich & Salad",
+          "description": "Choice of Coal Oven Roasted Chicken, Italian Tuna Salad, Long Hot Meatball Mozzarella, Burrata & Prosciutto, or Italian Sausage & Peppers sandwich with a choice of Anthony's Italian Salad, Caesar Salad, or Chopped Salad",
+          "price_cents": null,
+          "category": "Lunch Specials"
+        },
+        {
+          "id": "happy-hour-slider-stack",
+          "name": "The Slider Stack",
+          "description": "House-made beef meatballs topped with Italian plum tomato sauce and melted mozzarella, served on fresh-baked garlic knots.",
+          "price_cents": 500,
+          "category": "Happy Hour Bites"
+        },
+        {
+          "id": "happy-hour-kickin-chicken-flatbread",
+          "name": "Kickin' Chicken Flatbread",
+          "description": "Coal-fired flatbread layered with buffalo chicken breast, red onion, gorgonzola, and melted mozzarella.",
+          "price_cents": 500,
+          "category": "Happy Hour Bites"
+        },
+        {
+          "id": "happy-hour-spinach-artichoke-al-forno",
+          "name": "Spinach & Artichoke al Forno",
+          "description": "Coal-fired flatbread topped with spinach, artichokes, and melted mozzarella.",
+          "price_cents": 500,
+          "category": "Happy Hour Bites"
+        },
+        {
+          "id": "happy-hour-hot-stuffed",
+          "name": "Hot & Stuffed",
+          "description": "Long hot pepper filled with house-made meatballs, Italian sausage, ricotta, and Romano cheese, roasted on Italian plum tomato sauce.",
+          "price_cents": 500,
+          "category": "Happy Hour Bites"
+        },
+        {
+          "id": "happy-hour-coal-heat-cauli",
+          "name": "Coal Heat Cauli",
+          "description": "Coal-fired cauliflower topped with melted mozzarella and gorgonzola, finished with a buffalo drizzle.",
+          "price_cents": 500,
+          "category": "Happy Hour Bites"
+        },
+        {
+          "id": "starter-roasted-chicken-wings",
+          "name": "Roasted Chicken Wings",
+          "description": "Fresh, never frozen, coal-fired chicken wings available in eight flavors",
+          "price_cents": null,
+          "category": "Coal Fired Starters"
+        },
+        {
+          "id": "starter-marias-meatballs",
+          "name": "Maria's Meatballs",
+          "description": "Served in our signature Italian plum tomato sauce, served with ricotta & focaccia bread",
+          "price_cents": null,
+          "category": "Coal Fired Starters"
+        },
+        {
+          "id": "starter-garlic-knots",
+          "name": "Garlic Knots",
+          "description": "Topped with fresh garlic and parsley, olive oil and hand-grated Pecorino Romano",
+          "price_cents": null,
+          "category": "Coal Fired Starters"
+        },
+        {
+          "id": "starter-pasta-fagioli",
+          "name": "Pasta Fagioli",
+          "description": "Bacon, ditalini pasta, cannellini beans, celery, onions, spices & Italian plum tomatoes",
+          "price_cents": null,
+          "category": "Coal Fired Starters"
+        },
+        {
+          "id": "starter-eggplant-marino",
+          "name": "Eggplant Marino",
+          "description": "Thinly sliced eggplant topped with Italian plum tomato sauce & hand-grated Pecorino Romano",
+          "price_cents": null,
+          "category": "Coal Fired Starters"
+        },
+        {
+          "id": "starter-spinach-artichoke-dip",
+          "name": "Spinach & Artichoke Dip",
+          "description": "Baby spinach, mozzarella, and marinated artichokes served with our Romano focaccia",
+          "price_cents": null,
+          "category": "Coal Fired Starters"
+        },
+        {
+          "id": "starter-broccoli-rabe-sausage",
+          "name": "Broccoli Rabe & Sausage",
+          "description": "Bitter Italian greens sautéed in garlic and olive oil and served with Italian sausage",
+          "price_cents": null,
+          "category": "Coal Fired Starters"
+        },
+        {
+          "id": "starter-stromboli-pepperoni-italian-sausage",
+          "name": "Stromboli With Pepperoni & Italian Sausage",
+          "description": "Our signature pizza dough folded with pepperoni & Italian sausage, mozzarella, and Romano",
+          "price_cents": null,
+          "category": "Coal Fired Starters"
+        },
+        {
+          "id": "salad-anthonys-classic-italian-salad",
+          "name": "Anthony's Classic Italian Salad",
+          "description": "Romaine lettuce, celery, red onion, garbanzo beans, kalamata olives, tomato, hard cooked egg, Italian dressing",
+          "price_cents": null,
+          "category": "Salads"
+        },
+        {
+          "id": "salad-caesar-salad",
+          "name": "Caesar Salad",
+          "description": "Romaine tossed in our homemade Caesar dressing, focaccia croutons, Romano cheese",
+          "price_cents": null,
+          "category": "Salads"
+        },
+        {
+          "id": "salad-caprese-salad",
+          "name": "Caprese Salad",
+          "description": "Our fresh mozzarella and tomatoes, layered with olive oil and balsamic glaze and fresh basil",
+          "price_cents": null,
+          "category": "Salads"
+        },
+        {
+          "id": "salad-chopped-salad",
+          "name": "Chopped Salad",
+          "description": "Chopped Romaine, red onions, kalamata olives, roasted red peppers, pepperoni, gorgonzola, bacon, garbanzo beans, Italian dressing, balsamic glaze",
+          "price_cents": null,
+          "category": "Salads"
+        },
+        {
+          "id": "salad-arugula-burrata-salad",
+          "name": "Arugula Burrata Salad",
+          "description": "Fresh arugula, oven-roasted red peppers, red onions, Italian dressing, burrata and Romano",
+          "price_cents": null,
+          "category": "Salads"
+        },
+        {
+          "id": "pizza-create-your-own",
+          "name": "Create Your Own",
+          "description": "Every pizza is made to order from scratch with homemade dough and fresh ingredients",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-coal-fired-caesar-pizza",
+          "name": "Coal-Fired Caesar Pizza",
+          "description": "Our signature coal-fired crust brushed with garlic oil and topped with mozzarella, finished with romaine tossed in our house Caesar dressing, crispy bacon, hand-grated Romano, and a swirl of our house Caesar dressing",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-square-margherita",
+          "name": "Square Margherita",
+          "description": "Italian plum tomato sauce, fresh mozzarella, Pecorino Romano cheese & fresh basil",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-caprese",
+          "name": "Caprese",
+          "description": "Mozzarella, vine-ripe tomatoes and fresh basil",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-white",
+          "name": "White",
+          "description": "Ricotta cheese, mozzarella and hand-grated Pecorino Romano cheese",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-carnivori",
+          "name": "Carnivori",
+          "description": "Square pizza with thick-cut pepperoni, Italian sausage, homemade baby meatballs & bacon",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-paulies-pie",
+          "name": "Paulie's Pie",
+          "description": "Homemade baby meatballs, Italian sausage, hot or sweet peppers and ricotta cheese",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-roasted-cauliflower",
+          "name": "Roasted Cauliflower",
+          "description": "Square pizza with crushed red pepper, garlic-roasted cauliflower, Pecorino Romano, mozzarella cheese & breadcrumbs",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-mikes-hot-honey-thick-cut-pepperoni",
+          "name": "Mike's Hot Honey® & Thick-Cut Pepperoni",
+          "description": "Thick cut pepperoni, fresh mozzarella & Italian plum tomato sauce drizzled with Mike's Hot Honey®",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-burrata-prosciutto",
+          "name": "Burrata & Prosciutto",
+          "description": "Italian plum tomato sauce, red onions, fresh burrata, prosciutto, basil, Mike's Hot Honey® and balsamic glaze",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-meatballs-ricotta",
+          "name": "Meatballs & Ricotta",
+          "description": "Homemade baby meatballs, ricotta cheese, fresh mozzarella and Italian plum tomato sauce",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-eggplant-marino",
+          "name": "Eggplant Marino",
+          "description": "Thinly sliced eggplant, Italian plum tomato sauce, Pecorino Romano cheese",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-broccoli-rabe-sausage",
+          "name": "Broccoli Rabe & Sausage",
+          "description": "Bitter Italian greens sautéed in garlic and olive oil and topped with Italian sausage",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "pizza-hawaiian",
+          "name": "Hawaiian",
+          "description": "Juicy pineapple, crispy prosciutto, and Italian plum tomato sauce, drizzled with Sweet Chili",
+          "price_cents": null,
+          "category": "Coal Fired Pizza"
+        },
+        {
+          "id": "sandwich-chicken-caesar",
+          "name": "Chicken Caesar",
+          "description": "Coal-fired chicken breast, romaine tossed in our house Caesar dressing, and hand-grated Romano on homemade focaccia bread",
+          "price_cents": null,
+          "category": "Sandwiches"
+        },
+        {
+          "id": "sandwich-burrata-prosciutto",
+          "name": "Burrata & Prosciutto",
+          "description": "Fresh burrata, prosciutto, roasted red peppers, arugula, balsamic glaze, Italian dressing",
+          "price_cents": null,
+          "category": "Sandwiches"
+        },
+        {
+          "id": "sandwich-italian-sausage-peppers",
+          "name": "Italian Sausage & Peppers",
+          "description": "Italian sausage, caramelized onions & roasted sweet peppers on homemade focaccia bread",
+          "price_cents": null,
+          "category": "Sandwiches"
+        },
+        {
+          "id": "sandwich-italian-tuna-salad",
+          "name": "Italian Tuna Salad",
+          "description": "Tuna salad, tomatoes, arugula & Italian dressing on homemade focaccia bread",
+          "price_cents": null,
+          "category": "Sandwiches"
+        },
+        {
+          "id": "sandwich-coal-oven-roasted-chicken",
+          "name": "Coal-Oven-Roasted Chicken",
+          "description": "Chicken breast, prosciutto, roasted red peppers, mozzarella, arugula & Italian dressing on homemade focaccia bread",
+          "price_cents": null,
+          "category": "Sandwiches"
+        },
+        {
+          "id": "sandwich-long-hot-meatball-mozzarella",
+          "name": "Long Hot Meatball Mozzarella",
+          "description": "Meatballs, mozzarella, and long hot finger peppers piled high on homemade focaccia bread",
+          "price_cents": null,
+          "category": "Sandwiches"
+        },
+        {
+          "id": "sandwich-coal-oven-roasted-chicken-broccoli-rabe",
+          "name": "Coal-Oven-Roasted Chicken & Broccoli Rabe",
+          "description": "Chicken breast topped with broccoli rabe and mozzarella on homemade focaccia bread",
+          "price_cents": null,
+          "category": "Sandwiches"
+        },
+        {
+          "id": "pasta-spaghetti-meatballs",
+          "name": "Spaghetti & Meatballs",
+          "description": "Al dente spaghetti, homemade meatballs, Italian plum tomato sauce, Romano cheese",
+          "price_cents": null,
+          "category": "Pasta"
+        },
+        {
+          "id": "pasta-fettuccine-alfredo",
+          "name": "Fettuccine Alfredo",
+          "description": "Fettuccine pasta tossed in a sauce made from butter, heavy cream, & grated Parmesan cheese",
+          "price_cents": null,
+          "category": "Pasta"
+        },
+        {
+          "id": "pasta-baked-ziti",
+          "name": "Baked Ziti",
+          "description": "Ziti, Italian plum tomato sauce, ground beef, Italian seasoning, shredded mozzarella, basil",
+          "price_cents": null,
+          "category": "Pasta"
+        },
+        {
+          "id": "pasta-burrata-prosciutto-spaghetti",
+          "name": "Burrata & Prosciutto Spaghetti",
+          "description": "Fresh burrata & crispy prosciutto with spaghetti in our Italian plum tomato sauce, basil",
+          "price_cents": null,
+          "category": "Pasta"
+        },
+        {
+          "id": "kids-fettuccine-alfredo",
+          "name": "Kids Fettuccine Alfredo",
+          "description": "",
+          "price_cents": null,
+          "category": "Kids"
+        },
+        {
+          "id": "kids-spaghetti-meatball",
+          "name": "Kids Spaghetti and Meatball",
+          "description": "",
+          "price_cents": null,
+          "category": "Kids"
+        },
+        {
+          "id": "kids-buttered-noodles",
+          "name": "Buttered Noodles",
+          "description": "",
+          "price_cents": null,
+          "category": "Kids"
+        },
+        {
+          "id": "kids-cheese-pizza",
+          "name": "Kids Cheese Pizza",
+          "description": "",
+          "price_cents": null,
+          "category": "Kids"
+        },
+        {
+          "id": "kids-pepperoni-pizza",
+          "name": "Kids Pepperoni Pizza",
+          "description": "",
+          "price_cents": null,
+          "category": "Kids"
+        },
+        {
+          "id": "dessert-nutella-pizza",
+          "name": "Nutella Pizza",
+          "description": "Our signature coal-fired crust topped with Nutella, dusted with powdered sugar, a swirl of chocolate syrup, finished with fresh-cut strawberries & a mint leaf",
+          "price_cents": null,
+          "category": "Desserts"
+        },
+        {
+          "id": "dessert-mini-cannolis",
+          "name": "Mini Cannolis",
+          "description": "A blend of crisp original & chocolate shells, creamy filling, chocolate chips",
+          "price_cents": null,
+          "category": "Desserts"
+        },
+        {
+          "id": "dessert-chocolate-cake",
+          "name": "Chocolate Cake",
+          "description": "Three layer chocolate mousse cake",
+          "price_cents": null,
+          "category": "Desserts"
+        },
+        {
+          "id": "dessert-tiramisu",
+          "name": "Tiramisu",
+          "description": "Coffee-flavored dessert with a light sponge base, Zabaione cream topped with cocoa powder",
+          "price_cents": null,
+          "category": "Desserts"
+        },
+        {
+          "id": "dessert-ny-style-cheesecake",
+          "name": "NY Style Cheesecake",
+          "description": "New York-style cheesecake baked inside a graham cracker crust",
+          "price_cents": null,
+          "category": "Desserts"
+        },
+        {
+          "id": "dessert-platter",
+          "name": "Dessert Platter",
+          "description": "Chocolate Cake, Tiramisu, NY Cheesecake, and (4) Mini Cannolis",
+          "price_cents": null,
+          "category": "Desserts"
+        },
+        {
+          "id": "drink-peroni-0-0-non-alcoholic",
+          "name": "Peroni 0.0 Non-Alcoholic",
+          "description": "",
+          "price_cents": null,
+          "category": "Non-Alcoholic Drinks"
+        },
+        {
+          "id": "drink-pepsi-products",
+          "name": "Pepsi Products",
+          "description": "Pepsi, Pepsi Zero Sugar, Wild Cherry Pepsi, Starry, Mountain Dew, Mug Root Beer, Schweppes Ginger Ale, Lipton Raspberry Tea, Lipton Sweet & Unsweetened Brewed Tea",
+          "price_cents": null,
+          "category": "Non-Alcoholic Drinks"
+        },
+        {
+          "id": "drink-acqua-panna",
+          "name": "Acqua Panna",
+          "description": "",
+          "price_cents": null,
+          "category": "Non-Alcoholic Drinks"
+        },
+        {
+          "id": "drink-san-pellegrino",
+          "name": "San Pellegrino",
+          "description": "",
+          "price_cents": null,
+          "category": "Non-Alcoholic Drinks"
+        }
+      ]
+    },
+    {
+      "id": "wingstop-south-dale-mabry",
+      "name": "Wingstop - South Dale Mabry",
+      "cuisine": "Wings and Chicken",
+      "neighborhood": "South Tampa",
+      "address": "107 South Dale Mabry Highway, Tampa, FL 33609",
+      "phone": "",
+      "hours_note": "PDF export includes wing combos only; hours, full menu, and delivery availability must be verified at checkout",
+      "source_url": "https://www.wingstop.com/location/wingstop-2423-tampa-fl-33609/menu",
+      "refreshed_at": "2026-08-12T00:00:00Z",
+      "items": [
+        {
+          "id": "6-pc-wing-combo-boneless",
+          "name": "6 PC Wing Combo - Boneless",
+          "description": "6 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1199,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "6-pc-wing-combo-classic-bone-in",
+          "name": "6 PC Wing Combo - Classic (Bone-In)",
+          "description": "6 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1359,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "6-pc-wing-combo-mix-and-match",
+          "name": "6 PC Wing Combo - Mix & Match",
+          "description": "6 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1359,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "8-pc-wing-combo-boneless",
+          "name": "8 PC Wing Combo - Boneless",
+          "description": "8 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1349,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "8-pc-wing-combo-classic-bone-in",
+          "name": "8 PC Wing Combo - Classic (Bone-In)",
+          "description": "8 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1499,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "8-pc-wing-combo-mix-and-match",
+          "name": "8 PC Wing Combo - Mix & Match",
+          "description": "8 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1499,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "10-pc-wing-combo-boneless",
+          "name": "10 PC Wing Combo - Boneless",
+          "description": "10 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1499,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "10-pc-wing-combo-classic-bone-in",
+          "name": "10 PC Wing Combo - Classic (Bone-In)",
+          "description": "10 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1659,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "10-pc-wing-combo-mix-and-match",
+          "name": "10 PC Wing Combo - Mix & Match",
+          "description": "10 Boneless or Classic (Bone-In) wings with up to 2 flavors, regular fries or veggie sticks, 1 dip and a 20oz drink",
+          "price_cents": 1659,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "15-pc-meal-for-2-boneless",
+          "name": "15 PC Meal for 2 - Boneless",
+          "description": "15 Boneless or Classic (Bone-In) wings with up to 2 flavors, large fries or veggie sticks, 2 dips and 2 20oz drinks",
+          "price_cents": 2549,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "15-pc-meal-for-2-classic-bone-in",
+          "name": "15 PC Meal for 2 - Classic (Bone-In)",
+          "description": "15 Boneless or Classic (Bone-In) wings with up to 2 flavors, large fries or veggie sticks, 2 dips and 2 20oz drinks",
+          "price_cents": 3089,
+          "category": "Wing Combos"
+        },
+        {
+          "id": "15-pc-meal-for-2-mix-and-match",
+          "name": "15 PC Meal for 2 - Mix & Match",
+          "description": "15 Boneless or Classic (Bone-In) wings with up to 2 flavors, large fries or veggie sticks, 2 dips and 2 20oz drinks",
+          "price_cents": 3089,
+          "category": "Wing Combos"
+        }
       ]
     }
   ]

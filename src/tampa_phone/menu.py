@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -10,11 +11,13 @@ class MenuItem:
     id: str
     name: str
     description: str
-    price_cents: int
+    price_cents: int | None
     category: str
 
     @property
     def price(self) -> str:
+        if self.price_cents is None:
+            return "price unavailable"
         return f"${self.price_cents / 100:.2f}"
 
 
@@ -30,6 +33,14 @@ class Restaurant:
     source_url: str
     refreshed_at: str
     items: tuple[MenuItem, ...]
+
+
+def _normalize_search_text(value: str) -> str:
+    normalized = value.casefold().replace("\u2019", "'").replace("'", "").replace("&", " and ")
+    normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
+    words = normalized.split()
+    aliases = {"bbq": "barbecue"}
+    return " ".join(aliases.get(word, word) for word in words)
 
 
 class MenuStore:
@@ -60,14 +71,14 @@ class MenuStore:
         raise ValueError(f"Unknown item {item_id} at {restaurant.name}")
 
     def search_restaurants(self, query: str = "") -> tuple[Restaurant, ...]:
-        words = query.casefold().split()
+        words = _normalize_search_text(query).split()
         if not words:
             return self.restaurants
         matches = []
         for restaurant in self.restaurants:
-            haystack = " ".join(
-                (restaurant.name, restaurant.cuisine, restaurant.neighborhood)
-            ).casefold()
+            haystack = _normalize_search_text(
+                " ".join((restaurant.name, restaurant.cuisine, restaurant.neighborhood))
+            )
             if all(word in haystack for word in words):
                 matches.append(restaurant)
         return tuple(matches)

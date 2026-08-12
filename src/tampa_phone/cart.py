@@ -13,7 +13,9 @@ class CartLine:
     special_instructions: str = ""
 
     @property
-    def subtotal_cents(self) -> int:
+    def subtotal_cents(self) -> int | None:
+        if self.item.price_cents is None:
+            return None
         return self.item.price_cents * self.quantity
 
 
@@ -49,7 +51,7 @@ class Cart:
 
     @property
     def subtotal_cents(self) -> int:
-        return sum(line.subtotal_cents for line in self.lines)
+        return sum(line.subtotal_cents or 0 for line in self.lines)
 
     def clear(self) -> None:
         self.lines.clear()
@@ -59,15 +61,31 @@ class Cart:
             return "The cart is empty."
         restaurant = self.menus.restaurant(self.lines[0].restaurant_id)
         details = []
+        has_unknown_prices = False
         for index, line in enumerate(self.lines, start=1):
             note = f" Notes: {line.special_instructions}." if line.special_instructions else ""
-            details.append(
-                f"{index}. {line.quantity} {line.item.name}, "
-                f"${line.subtotal_cents / 100:.2f}.{note}"
-            )
+            if line.subtotal_cents is None:
+                has_unknown_prices = True
+                line_price = "price unavailable"
+            else:
+                line_price = f"${line.subtotal_cents / 100:.2f}"
+            details.append(f"{index}. {line.quantity} {line.item.name}, {line_price}.{note}")
+        known_price_lines = sum(line.subtotal_cents is not None for line in self.lines)
+        if known_price_lines == 0:
+            subtotal = " No menu subtotal is available."
+        elif has_unknown_prices:
+            subtotal = f" Known-price subtotal ${self.subtotal_cents / 100:.2f}."
+        else:
+            subtotal = f" Menu subtotal ${self.subtotal_cents / 100:.2f}."
+        price_warning = (
+            " One or more item prices were unavailable and are not included in that subtotal."
+            if has_unknown_prices and known_price_lines > 0
+            else ""
+        )
         return (
             f"Cart for {restaurant.name}. "
             + " ".join(details)
-            + f" Menu subtotal ${self.subtotal_cents / 100:.2f}. "
-            "Taxes, fees, availability, and the final total still need review."
+            + subtotal
+            + price_warning
+            + " Taxes, fees, availability, and the final total still need review."
         )
